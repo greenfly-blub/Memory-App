@@ -56,6 +56,23 @@ public class End_Activity extends AppCompatActivity {
     private void setEndResultButtonText(int buttonIndex, int endResult) {
         int buttonId = getResources().getIdentifier("btn_option" + buttonIndex, "id", getPackageName());
         Button selectedButton = findViewById(buttonId);
+        //set text to chosen button
         selectedButton.setText(String.valueOf(endResult));
+
+        //sets the numbers of the other buttons around the result
+        for (int i = 1; i <= 5; i++) {
+            if (i != buttonIndex) {
+                int otherButtonId = getResources().getIdentifier("btn_option" + i, "id", getPackageName());
+                Button otherButton = findViewById(otherButtonId);
+
+                // Number in area of +/-5 of result
+                int randomNumber = endResult + (i - buttonIndex);
+                //Damit die Nummer nicht negativ ist:
+                randomNumber = Math.max(0, randomNumber);
+
+                // Setze den Text auf den anderen Button
+                otherButton.setText(String.valueOf(randomNumber));
+            }
+        }
     }
 }
