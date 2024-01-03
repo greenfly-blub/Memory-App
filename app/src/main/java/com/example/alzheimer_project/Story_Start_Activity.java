@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 public class Story_Start_Activity extends AppCompatActivity {
     TextView tv_crossroads;
-    Button btn_village, button2;
+    Button btn_village, btn_forest;
 
     Story_Start story;
 
@@ -18,7 +18,7 @@ public class Story_Start_Activity extends AppCompatActivity {
 
         tv_crossroads = findViewById(R.id.tv_crossroads);
         btn_village = findViewById(R.id.btn_village);
-        button2 = findViewById(R.id.button2);
+        btn_forest = findViewById(R.id.btn_forest);
 
         story = new Story_Start(this);
         story.startingPoint();

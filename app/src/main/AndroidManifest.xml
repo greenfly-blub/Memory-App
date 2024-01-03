@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Alzheimer_Project"
         tools:targetApi="31">
         <activity
+            android:name=".Forest_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Village_Activity"
             android:exported="false" />
         <activity

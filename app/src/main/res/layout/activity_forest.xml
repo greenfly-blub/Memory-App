@@ -4,22 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Story_Start_Activity">
+    tools:context=".Forest_Activity">
 
+    <!-- activity_forest.xml -->
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!-- Add specific UI elements for the forest here -->
         <TextView
-            android:id="@+id/tv_crossroads"
-            android:layout_width="match_parent"
+            android:id="@+id/tv_random_number"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="5"
-            android:text="TextView" />
+            android:text="This Text Should Not Be Shown"
+            android:textSize="18sp" />
 
         <Button
-            android:id="@+id/btn_village"
+            android:id="@+id/btn_choice1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginLeft="50dp"
@@ -29,13 +33,15 @@
             android:text="Button" />
 
         <Button
-            android:id="@+id/btn_forest"
+            android:id="@+id/btn_choice2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_weight="1"
+            android:backgroundTint="@color/btn_color_2"
             android:text="Button" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,5 +2,6 @@ To Do:
 
 X Random Zahlen zum End Screen nehmen.
 X Alle zusammenzählen.
-* Einen abziehen. DERZEIT POS 3 - MUSS RANDOMISIERT WERDEN UND AN TEXT ANGEPASST
+X Einen abziehen. DERZEIT POS 3 - MUSS RANDOMISIERT WERDEN UND AN TEXT ANGEPASST
 * Die Zahl auf einem Button anzeigen.
+* Negative Zahlen unmöglich machen. (Falls sie random zustande kommen sollten, soll im Text die Zahl genannt werden, die zu 0 führt)

@@ -15,7 +15,7 @@ public class Story_Start {
         Log.d("Starting Point", "starting point");
 
         ssa.btn_village.setText("Dorf");
-        ssa.button2.setText("Wald");
+        ssa.btn_forest.setText("Wald");
 
         ssa.btn_village.setOnClickListener(view -> {
             // Here you click Dorf and start Village Activity
@@ -24,8 +24,10 @@ public class Story_Start {
 
         });
 
-        ssa.button2.setOnClickListener(view -> {
-            // CODE FOR WALD
+        ssa.btn_forest.setOnClickListener(view -> {
+            // Here you click Dorf and start Village Activity
+            Log.d("Forest_Activity", "Button Wald clicked");
+            ssa.getApplicationContext().startActivity(new Intent(ssa, Forest_Activity.class));
         });
     }
 }
