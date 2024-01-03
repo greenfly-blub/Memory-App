@@ -16,6 +16,9 @@
             android:name=".Village_Activity"
             android:exported="false" />
         <activity
+            android:name=".End_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Story_Start_Activity"
             android:exported="false"
             android:label="@string/title_activity_game_screen"
