@@ -1,36 +1,40 @@
 package com.example.alzheimer_project;
 
-import android.widget.Button;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Forest {
 
-    public static int generateRndNumFive() {
-        Random random = new Random();
-        return random.nextInt(5) + 1; // No between 1 and 5
+    ArrayList<Integer> randomNumbers = new ArrayList<>();
+
+    public Forest() {
+        generateRandomNumbers(randomNumbers);
+
+        // Print the generated numbers
+        System.out.println("Generated Numbers: " + randomNumbers);
     }
 
-    public static int generateRndNumTen() {
-        Random random = new Random();
-        return random.nextInt(10) + 1; // No between 1 and 10
+    public static void main(String[] args) {
+        new Forest();
     }
 
-    public static void setButtonText(Button button, String text) {
-        button.setText(text);
-    }
+    public void generateRandomNumbers(ArrayList<Integer> randomNumbers) {
+        // Determine a random position (excluding the first)
+        int randomPosition = new Random().nextInt(5) + 1;
 
-    // Hier als Beispiel: Wenn Button choice1 ist, dann TEN - kann man anders randomisieren
-    public static void setRandomNumberAndButtonText(Button btnChoice, TextView randomNumberTextView, ArrayList<Integer> randomNumbers) {
-        int randomNumber;
-        if (btnChoice.getId() == R.id.btn_choice1) {
-            randomNumber = generateRndNumTen();
-        } else {
-            randomNumber = generateRndNumFive();
+        for (int i = 0; i < 5; i++) {
+            if (i == randomPosition) {
+                // Generate a negative number
+                randomNumbers.add(generateRndNumFive() * -1);
+            } else {
+                // Generate a positive number
+                randomNumbers.add(generateRndNumFive());
+            }
         }
-        randomNumbers.add(randomNumber); // Add number to ArrayList
-        randomNumberTextView.setText(String.valueOf(randomNumber));
+    }
+
+    public int generateRndNumFive() {
+        Random random = new Random();
+        return random.nextInt(5) + 1; // Number between 1 and 5
     }
 }

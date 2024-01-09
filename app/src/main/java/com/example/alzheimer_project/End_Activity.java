@@ -19,7 +19,7 @@ public class End_Activity extends AppCompatActivity {
         ArrayList<Integer> numbers = getIntent().getIntegerArrayListExtra("randomNumbers");
 
         // Call Add and Subtract method
-        int endResult = addAndSubtract(numbers);
+        int endResult = addNumbers(numbers);
 
         // Show End Result
         TextView specialSumTextView = findViewById(R.id.tv_math);
@@ -32,10 +32,9 @@ public class End_Activity extends AppCompatActivity {
         setEndResultButtonText(randomButtonIndex, endResult);
     }
 
-    // Summation and Subtraction
-    private int addAndSubtract(ArrayList<Integer> numbers) {
-        // Subtrahiere die Zahl an der 3. Position 2 MAL - weil sie bei der Addition dazu gezählt wurde
-        return calculateSum(numbers) - 2 * numbers.get(2);
+    private int addNumbers(ArrayList<Integer> numbers) {
+
+        return calculateSum(numbers);
     }
 
     // Füge die calculateSum Methode hier hinzu

@@ -5,3 +5,6 @@ X Alle zusammenzählen.
 X Einen abziehen. DERZEIT POS 3 - MUSS RANDOMISIERT WERDEN UND AN TEXT ANGEPASST
 * Die Zahl auf einem Button anzeigen.
 * Negative Zahlen unmöglich machen. (Falls sie random zustande kommen sollten, soll im Text die Zahl genannt werden, die zu 0 führt)
+
+*Test Run: -1 Result: 0 all the Options
+
