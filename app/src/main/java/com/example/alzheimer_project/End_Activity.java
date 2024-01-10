@@ -15,7 +15,7 @@ public class End_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
 
-        // Get the List with the numbers from the activity before
+        // Get the List with the numbers from the Forest_Activity
         ArrayList<Integer> numbers = getIntent().getIntegerArrayListExtra("randomNumbers");
 
         // Call Add and Subtract method
@@ -23,7 +23,7 @@ public class End_Activity extends AppCompatActivity {
 
         // Show End Result
         TextView specialSumTextView = findViewById(R.id.tv_math);
-        specialSumTextView.setText("Ergebnis: " + String.valueOf(endResult));
+        specialSumTextView.setText("Ergebnis: " + String.valueOf(endResult) + " Array: " + numbers.toString());
 
         // Get a random button index
         int randomButtonIndex = getRandomButtonIndex();
@@ -33,11 +33,10 @@ public class End_Activity extends AppCompatActivity {
     }
 
     private int addNumbers(ArrayList<Integer> numbers) {
-
         return calculateSum(numbers);
     }
 
-    // Füge die calculateSum Methode hier hinzu
+    // Add the calculateSum method here
     private int calculateSum(ArrayList<Integer> numbers) {
         int sum = 0;
         for (int number : numbers) {
@@ -66,12 +65,13 @@ public class End_Activity extends AppCompatActivity {
 
                 // Number in area of +/-5 of result
                 int randomNumber = endResult + (i - buttonIndex);
-                //Damit die Nummer nicht negativ ist:
+                //To ensure the number is not negative:
                 randomNumber = Math.max(0, randomNumber);
 
-                // Setze den Text auf den anderen Button
+                // Set the text on the other button
                 otherButton.setText(String.valueOf(randomNumber));
             }
         }
     }
 }
+

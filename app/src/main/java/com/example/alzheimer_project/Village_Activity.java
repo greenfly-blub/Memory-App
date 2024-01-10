@@ -15,6 +15,8 @@ public class Village_Activity extends AppCompatActivity {
     private int counter = 0;
     private ArrayList<Integer> randomNumbers = new ArrayList<>();
 
+    Village village = new Village();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +29,7 @@ public class Village_Activity extends AppCompatActivity {
         btnChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Village.setRandomNumberAndButtonText(btnChoice1, randomNumberTextView, randomNumbers);
+                village.setRandomNumberAndButtonText(btnChoice1, randomNumberTextView);
 
                 if (++counter >= 5) {
                     Log.d("Village_Activity", "counter over 5 - choice 1");
@@ -39,7 +41,7 @@ public class Village_Activity extends AppCompatActivity {
         btnChoice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Village.setRandomNumberAndButtonText(btnChoice2, randomNumberTextView, randomNumbers);
+                village.setRandomNumberAndButtonText(btnChoice2, randomNumberTextView);
 
                 if (++counter >= 5) {
                     Log.d("Village_Activity", "counter over 5 - choice 2");

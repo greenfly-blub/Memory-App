@@ -23,15 +23,14 @@ public class Village {
     }
 
     //Hier als Beispiel: Wenn Button choice1 ist, dann TEN - kann man anders randomisieren
-    public static void setRandomNumberAndButtonText(Button btnChoice, TextView randomNumberTextView, ArrayList<Integer> randomNumbers) {
+    public static void setRandomNumberAndButtonText(Button btnChoice, TextView randomNumberTextView) {
         int randomNumber;
         if (btnChoice.getId() == R.id.btn_choice1) {
             randomNumber = generateRndNumTen();
         } else {
             randomNumber = generateRndNumFive();
         }
-        randomNumbers.add(randomNumber); // add number to ArrayList
-        randomNumberTextView.setText(String.valueOf(randomNumber));
+
     }
 }
 
