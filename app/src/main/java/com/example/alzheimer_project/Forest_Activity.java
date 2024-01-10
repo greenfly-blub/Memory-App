@@ -27,9 +27,9 @@ public class Forest_Activity extends AppCompatActivity {
         final Button btnChoice1 = findViewById(R.id.btn_choice1);
         final Button btnChoice2 = findViewById(R.id.btn_choice2);
 
-        // Set initialNumber to be the first number shown and the first in the array - between 1 and 7
+        // Set initialNumber to be the first number shown and the first in the array - between 5 and 9 (so it can never get negative)
         Random rnd = new Random();
-        initialNumber = rnd.nextInt(7) + 1;
+        initialNumber = rnd.nextInt(4) + 5;
         randomNumbers.add(initialNumber);
         updateRandomNumberTextView(randomNumberTextView, initialNumber);
 
